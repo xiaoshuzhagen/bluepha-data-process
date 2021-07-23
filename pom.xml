@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bluepha</groupId>
+    <artifactId>bluepha-data-process</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>bluepha-data-process</name>
+    <description>Demo project for Spring Boot</description>
+
+    <!-- 定义spring boot 版本 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.1</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 定义全局变量 -->
+    <properties>
+        <java.version>11</java.version>
+        <influxdb-client-java.version>2.0.0</influxdb-client-java.version>
+    </properties>
+
+    <!-- 引入项目需要的构件 -->
+    <dependencies>
+
+        <!-- 引入 spring boot starter web 构件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 引入 lombok 构件 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- 引入 mqtt spring boot starter 构件 -->
+        <dependency>
+            <groupId>com.github.tocrhz</groupId>
+            <artifactId>mqtt-spring-boot-starter</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+
+        <!-- 引入 spring boot starter test 构件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>bluepha-data-process</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
