@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bluepha.business.deviceOnlineDataInfo.mapper.DeviceOnlineDataInfoMapper">
+    
+    <!-- 保存设备在线参数数据信息 -->
+    <insert id="save" parameterType="com.bluepha.business.deviceOnlineDataInfo.bean.DeviceOnlineDataInfo">
+        insert into device_online_data_info (id,device_id,data,event_time)
+        values(
+                    #{id},#{deviceId},
+                    #{data,typeHandler = com.bluepha.common.handler.JsonTypeHandler},
+                    #{eventTime}
+        )
+    </insert>
+
+</mapper>

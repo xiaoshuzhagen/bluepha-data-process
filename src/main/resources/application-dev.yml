@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://52.80.218.131:55432/bluepha_cloud
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10          # 连接池中最小连接数。默认值10
+      maximum-pool-size: 200    #  连接池中最大连接数，包括空闲和正在使用的连接，默认值是10
+      max-lifetime: 20          # 连接池中连接的最大生命周期,连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟
+      idle-timeout: 2           # 连接idle状态的最大时长（毫秒），超时则被释放（retired），默认:10分钟

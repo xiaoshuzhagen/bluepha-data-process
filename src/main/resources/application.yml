@@ -1,7 +1,14 @@
 server:
   port: 8081                      # 服务器端口号
+spring:
+  profiles:
+    active: dev
 mqtt:
   username: admin                 # 连接用户名
   password: public                # 连接用户密码
   uri: tcp://124.70.104.243:1883  # 推送消息的连接地址
   client-id: ${random.value}      # 客户端id,这里使用随机值
+mybatis:
+  type-aliases-package: com.bluepha.business.*.mapper
+  mapper-locations: classpath:mappers/*Mapper.xml
+  type-handlers-package: com.bluepha.common.utils

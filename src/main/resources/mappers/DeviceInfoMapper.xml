@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bluepha.business.deviceInfo.mapper.DeviceInfoMapper">
+
+    <!-- 根据主键id查询设备信息 -->
+    <select id="findById" parameterType="java.lang.String" resultType="com.bluepha.business.deviceInfo.bean.DeviceInfoVO">
+        select id,device_name as deviceName,device_type as deviceType,
+               device_specs as deviceSpecs,device_status as deviceStatus,laboratory_id as laboratoryId
+        from   device_info
+        where  id = #{id}
+    </select>
+
+</mapper>
