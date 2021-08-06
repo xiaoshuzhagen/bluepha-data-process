@@ -12,3 +12,4 @@ mybatis:
   type-aliases-package: com.bluepha.business.*.mapper
   mapper-locations: classpath:mappers/*Mapper.xml
   type-handlers-package: com.bluepha.common.utils
+
